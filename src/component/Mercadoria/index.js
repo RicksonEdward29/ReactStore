@@ -1,8 +1,8 @@
 import React from 'react';
-import {View, Text, TextInput, TouchableOpacity, Image, StyleSheet} from 'react-native';
+import {View, Text, TextInput, TouchableOpacity, Image, StyleSheet, Button} from 'react-native';
 
 
-export default function Mercadoria(){
+export default function Mercadoria(props){
 
       function filterDesc(desc){
             if(desc.lenght < 27){
@@ -12,24 +12,18 @@ export default function Mercadoria(){
       }
 
       return(
-      <TouchableOpacity style={styles.container}>
+      <TouchableOpacity style={styles.container} onPress={props.onClick}>
             <Image 
-            source={require('../../assets/img1.png')}
+            source={props.img}
             style={styles.mercadImg}
             />
             <Text style={styles.mercadText}>
-                  {filterDesc('Whisk Escocês 750ml')}
+                  {filterDesc(props.children)}
             </Text>
             <Text style={styles.mercadText}>
-                  R$89,99
+                  {props.cost}
             </Text>
-            <Text>
-            +
-            </Text>
-            <TextInput/>
-            <Text>
-            -
-            </Text>
+            
       </TouchableOpacity>
       );
 }
@@ -45,5 +39,13 @@ const styles = StyleSheet.create({
       },
       mercadText:{
             fontSize: 12,
-      }
+      },
+      input:{
+        textAlign: 'center',
+        flexDirection: 'row',
+        height: 38,
+        borderWidth: 1,
+        borderColor: '#000',
+        alignItems: 'center'
+      },
 });
