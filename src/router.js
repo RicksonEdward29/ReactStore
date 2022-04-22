@@ -22,11 +22,11 @@ function Routes(){
                         component={Detail}
                         options={{
                         headerRight: () => (
-                              <TouchableOpacity style={{marginRight: 85}}>
-                                    <Feather
+                              <TouchableOpacity>
+                                    <Feather style={{marginRight: 20, }}
                                     name="shopping-cart"
                                     size={26}
-                                    color="black"
+                                    color="#00C013"
                                     />
                               </TouchableOpacity>
                         )

@@ -8,7 +8,7 @@ export default function Mercadoria(props){
             if(desc.lenght < 27){
                   return desc;
             }
-            return `${desc.substring(0, 20)}...`;
+            return `${desc.substring(0, 25)}`;
       }
 
       return(
@@ -22,8 +22,7 @@ export default function Mercadoria(props){
             </Text>
             <Text style={styles.mercadText}>
                   {props.cost}
-            </Text>
-            
+            </Text> 
       </TouchableOpacity>
       );
 }
