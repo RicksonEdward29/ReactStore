@@ -36,11 +36,10 @@ export default function Home() {
                   marginTop: -50,
             }}
             />
-            <MaterialIcons style={styles.cart}
-                  name="shopping-cart"
+            <MaterialIcons style={styles.cart} name="shopping-cart"
                   size={30}
-                  color="#00C013"
-            />
+                  color="#00C013" onPress={()=>navigation.navigate('Pagamento')}>
+            </MaterialIcons>
             </SafeAreaView>
             <Text style={{marginLeft: 255, marginTop: -45, fontSize: 18, color: 'white'}}> 5  |   R$ 89,99</Text>
             <TextInput style={styles.textPg}>

@@ -7,7 +7,6 @@ export default function Detail({ navigation }) {
       navigation.setOptions({
             headerTitle: 'Detalhes'
       })
-
       return (
             <ScrollView>
                   <Image
